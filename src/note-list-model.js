@@ -8,7 +8,8 @@ class NoteList {
   }
 
   addNote(string){
-    let note = new Note(string);
+    let noteID = this._list.length
+    let note = new Note(string, noteID);
     this._list.push(note);
   }
 }

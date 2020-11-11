@@ -9,7 +9,8 @@
   };
 
   function canReturnHTML() {
-    assert.isTrue(noteListView.createHTML() === "<ul><li><div>test string with mor...</li></div><li><div>another test string</li></div></ul>");
+    console.log(noteListView.createHTML())
+    assert.isTrue(noteListView.createHTML() === "<ul><li><a id='0' href='#notes/0'>test string with mor...</a></li><li><a id='1' href='#notes/1'>another test string...</a></li></ul>");
   }
 
   function canReturnHTMLwithNoNotes() {
@@ -21,4 +22,3 @@
   hasNoteList();
   canReturnHTML();
 })(this);
-

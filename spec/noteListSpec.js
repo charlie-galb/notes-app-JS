@@ -12,6 +12,12 @@
     assert.isTrue(noteList.list[1].content === 'testing too');
   };
 
+  function noteListCanAddID() {
+    assert.isTrue(noteList.list[0].id === 0);
+    assert.isTrue(noteList.list[1].id === 1);
+  };
+
   noteListHasArray();
   noteListCanStoreNote();
+  noteListCanAddID();
 })(this);
