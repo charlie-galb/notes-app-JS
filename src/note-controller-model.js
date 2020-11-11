@@ -14,22 +14,22 @@ class NoteController {
 };
 
   function setHashChangeEventListener() {
-    console.log('whatever')
+    // console.log('whatever')
     window.addEventListener("hashchange", showNoteForCurrentPage);
   };
 
   function showNoteForCurrentPage() {
-    console.log('noteforcurrentpage')
+    // console.log('noteforcurrentpage')
     showNote(getNoteFromUrl());
   };
 
   function getNoteFromUrl() {
-    console.log('notefromurl')
+    // console.log('notefromurl')
     return window.location.hash.split("/")[1];
   };
 
   function showNote(noteID) {
-    console.log(document.getElementById(noteID).innerHTML)
+    // console.log(document.getElementById('app').innerHTML)
     document.getElementById('app').innerHTML = `<p>${nc.noteList.list[noteID].content}</p>`
   };
 
